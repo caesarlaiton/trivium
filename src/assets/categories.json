@@ -1,0 +1,50 @@
+[
+	{
+		"id": "ae",
+		"name": "Art",
+		"color": "#8B5CF6",
+		"label": "Arte"
+	},
+	{
+		"id": "ah",
+		"name": "Science",
+		"color": "#14B8A6",
+		"label": "Ciencia"
+	},
+	{
+		"id": "ag",
+		"name": "General culture",
+		"color": "#EAB308",
+		"label": "Cultura General"
+	},
+	{
+		"id": "ab",
+		"name": "Entertainment",
+		"color": "#EC4899",
+		"label": "Entretenimiento"
+	},
+	{
+		"id": "af",
+		"name": "Space",
+		"color": "#6366F1",
+		"label": "Espacio"
+	},
+	{
+		"id": "ad",
+		"name": "Geography",
+		"color": "#10B981",
+		"label": "Geografía"
+	},
+	{
+		"id": "aa",
+		"name": "History",
+		"color": "#F97316",
+		"label": "Historia"
+	},
+	{
+		"id": "ac",
+		"name": "Technology",
+		"color": "#3B82F6",
+		"label": "Tecnología"
+	}
+]

@@ -1,0 +1,678 @@
+{
+	"Science": [
+		{
+			"question": "¿Qué mide el newton?",
+			"answers": ["Fuerza", "Peso", "Distancia", "Tiempo"],
+			"correctAnswer": "Fuerza"
+		},
+		{
+			"question": "¿Cómo se llama el proceso por el cual un sólido se convierte en gas sin pasar por el estado líquido?",
+			"answers": ["Sublimación", "Evaporación", "Condensación", "Congelación"],
+			"correctAnswer": "Sublimación"
+		},
+		{
+			"question": "¿Cuál es la unidad más pequeña de materia?",
+			"answers": ["Átomo", "Molécula", "Célula", "Electrón"],
+			"correctAnswer": "Átomo"
+		},
+		{
+			"question": "¿Cuántas patas tiene una mosca?",
+			"answers": ["6", "4", "8", "2"],
+			"correctAnswer": "6"
+		},
+		{
+			"question": "¿De qué están hechos los diamantes?",
+			"answers": ["Carbono", "Vidrio", "Plata", "Platino"],
+			"correctAnswer": "Carbono"
+		},
+		{
+			"question": "¿Cómo se llama la fuerza que atrae los objetos entre sí?",
+			"answers": ["Gravedad", "Magnetismo", "Fricción", "Electricidad"],
+			"correctAnswer": "Gravedad"
+		},
+		{
+			"question": "¿Cuál es el único número primo par?",
+			"answers": ["2", "14", "6", "8"],
+			"correctAnswer": "2"
+		},
+		{
+			"question": "¿Qué vitamina se puede sintetizar al exponerse a la luz solar?",
+			"answers": ["Vitamina D", "Vitamina A", "Vitamina C", "Vitamina E"],
+			"correctAnswer": "Vitamina D"
+		},
+		{
+			"question": "¿Cómo se llama el triángulo que tiene tres lados iguales?",
+			"answers": ["Equilátero", "Isósceles", "Escaleno", "Rectángulo"],
+			"correctAnswer": "Equilátero"
+		},
+		{
+			"question": "¿Cómo se llama el proceso por el cual las plantas convierten la luz solar en energía?",
+			"answers": ["Fotosíntesis", "Respiración", "Digestión", "Fermentación"],
+			"correctAnswer": "Fotosíntesis"
+		},
+		{
+			"question": "¿Cuántos elementos químicos hay en la tabla periódica?",
+			"answers": ["118", "92", "104", "113"],
+			"correctAnswer": "118"
+		},
+		{
+			"question": "¿Qué estudia la cartografía?",
+			"answers": ["Mapas", "Coches", "Gatos", "Alfombras"],
+			"correctAnswer": "Mapas"
+		},
+		{
+			"question": "¿Qué elemento contienen todos los ácidos?",
+			"answers": ["Hidrógeno", "Oxígeno", "Helio", "Nitrógeno"],
+			"correctAnswer": "Hidrógeno"
+		},
+		{
+			"question": "-3 + 10 ÷ 2",
+			"answers": ["2", "1", "4", "3.5"],
+			"correctAnswer": "2"
+		},
+		{
+			"question": "¿Cómo se llama la proteína que da fuerza a la piel, el cabello y las uñas?",
+			"answers": ["Queratina", "Colágeno", "Elastina", "Miosina"],
+			"correctAnswer": "Queratina"
+		},
+		{
+			"question": "¿Qué es un ovíparo?",
+			"answers": ["Un animal que pone huevos", "Un animal que pare", "Un animal que vuela", "Un animal que vive en el agua"],
+			"correctAnswer": "Un animal que pone huevos"
+		},
+		{
+			"question": "¿Cada cuántos años pasa el cometa Halley cerca de la Tierra?",
+			"answers": ["75", "86", "96", "106"],
+			"correctAnswer": "75"
+		},
+		{
+			"question": "¿Qué mide el galón?",
+			"answers": ["Volumen", "Peso", "Distancia", "Tiempo"],
+			"correctAnswer": "Volumen"
+		},
+		{
+			"question": "¿Cuál es el símbolo químico del oro?",
+			"answers": ["Au", "Ag", "Cu", "Fe"],
+			"correctAnswer": "Au"
+		},
+		{
+			"question": "¿Cuál es el primer elemento de la tabla periódica?",
+			"answers": ["Hidrógeno", "Helio", "Litio", "Oxígeno"],
+			"correctAnswer": "Hidrógeno"
+		},
+		{
+			"question": "Si 50 es el 100%, ¿cuánto es el 90%?",
+			"answers": ["45", "10", "100", "50"],
+			"correctAnswer": "45"
+		},
+		{
+			"question": "¿Qué metal se encuentra en el centro de la Tierra?",
+			"answers": ["Hierro", "Níquel", "Cobre", "Zinc"],
+			"correctAnswer": "Hierro"
+		}
+	],
+	"Space": [
+		{
+			"question": "¿Cuántas lunas tiene Marte?",
+			"answers": ["1", "2", "4", "No tiene"],
+			"correctAnswer": "2"
+		},
+		{
+			"question": "¿Qué hay dentro de un agujero negro en la película \"Interstellar\"?",
+			"answers": ["Una quinta dimensión", "Un planeta", "Una nave espacial", "Nada"],
+			"correctAnswer": "Una quinta dimensión"
+		},
+		{
+			"question": "¿Cuál es el planeta más grande de nuestro sistema solar?",
+			"answers": ["Júpiter", "Saturno", "Urano", "Neptuno"],
+			"correctAnswer": "Júpiter"
+		},
+		{
+			"question": "¿Aproximadamente qué temperatura hay en el espacio?",
+			"answers": ["-270 °C", "-120 °C", "0 °C", "38 °C"],
+			"correctAnswer": "-270 °C"
+		},
+		{
+			"question": "¿Cómo se llama el primer satélite artificial lanzado al espacio?",
+			"answers": ["Sputnik 1", "Explorer 1", "Vanguard 1", "Vostok 1"],
+			"correctAnswer": "Sputnik 1"
+		},
+		{
+			"question": "¿Cuál es la figura geométrica que describe la órbita de los planetas?",
+			"answers": ["Elipse", "Círculo", "Circunferencia", "Cuadrado"],
+			"correctAnswer": "Elipse"
+		},
+		{
+			"question": "¿Cómo se llama la nave espacial que aterrizó en Marte en 2021 como parte de la misión Mars 2020?",
+			"answers": ["Perseverance", "Curiosity", "Opportunity", "Spirit"],
+			"correctAnswer": "Perseverance"
+		},
+		{
+			"question": "¿Cómo se llama el único satélite natural de la Tierra?",
+			"answers": ["Luna", "Marte", "Venus", "Júpiter"],
+			"correctAnswer": "Luna"
+		},
+		{
+			"question": "¿Cuál es la materia más común en el universo?",
+			"answers": ["Hidrógeno", "Materia oscura", "Helio", "Oxígeno"],
+			"correctAnswer": "Hidrógeno"
+		},
+		{
+			"question": "¿Cuánto tarda la luz del sol en llegar a la Tierra?",
+			"answers": ["8 minutos", "3,5 horas", "26 segundos", "10 segundos"],
+			"correctAnswer": "8 minutos"
+		},
+		{
+			"question": "¿Cómo se llama el primer hombre en caminar sobre la Luna?",
+			"answers": ["Neil Armstrong", "Buzz Aldrin", "Alan Shepard", "Yuri Gagarin"],
+			"correctAnswer": "Neil Armstrong"
+		},
+		{
+			"question": "¿Cómo se llama el asteroide más grande conocido en nuestro sistema solar?",
+			"answers": ["Ceres", "Vesta", "Palas", "Higía"],
+			"correctAnswer": "Ceres"
+		},
+		{
+			"question": "¿Principalmente qué átomos usan las estrellas en su proceso de fusión?",
+			"answers": ["Hidrógeno", "Helio", "Oxígeno", "Carbono"],
+			"correctAnswer": "Hidrógeno"
+		},
+		{
+			"question": "¿Cómo se llama la estrella más brillante del cielo nocturno?",
+			"answers": ["Sirio", "Próxima Centauri", "Betelgeuse", "Aldebarán"],
+			"correctAnswer": "Sirio"
+		},
+		{
+			"question": "¿Aproximadamente cuántas estrellas hay en el sistema solar?",
+			"answers": ["1", "100", "100.000", "Demasiadas para contar"],
+			"correctAnswer": "1"
+		},
+		{
+			"question": "¿Cuál es la velocidad de la luz aproximadamente?",
+			"answers": ["300.000 km/s", "200.000 km/s", "100.000 km/s", "400.000 km/s"],
+			"correctAnswer": "300.000 km/s"
+		}
+	],
+	"Art": [
+		{
+			"question": "¿Cómo se llama el famoso ballet compuesto por Tchaikovsky?",
+			"answers": ["El lago de los cisnes", "El cascanueces", "Romeo y Julieta", "La bella durmiente"],
+			"correctAnswer": "El lago de los cisnes"
+		},
+		{
+			"question": "¿Quién es el autor de la serie de libros \"Harry Potter\"?",
+			"answers": ["J.K. Rowling", "Stephen King", "George R.R. Martin", "Dan Brown"],
+			"correctAnswer": "J.K. Rowling"
+		},
+		{
+			"question": "¿De quién está enamorado Don Quijote en la obra \"El ingenioso hidalgo Don Quijote de la Mancha\"?",
+			"answers": ["Dulcinea", "Maritornes", "Antonia", "Fernanda"],
+			"correctAnswer": "Dulcinea"
+		},
+		{
+			"question": "¿Cuántas cuerdas tiene una guitarra?",
+			"answers": ["Seis", "Cuatro", "Doce", "Ocho"],
+			"correctAnswer": "Seis"
+		},
+		{
+			"question": "¿Qué estilo arquitectónico tiene la catedral de Notre Dame?",
+			"answers": ["Gótico", "Barroco", "Renacentista", "Neoclásico"],
+			"correctAnswer": "Gótico"
+		},
+		{
+			"question": "¿Qué famosa novela de George Orwell cuenta la historia de una sociedad donde la vigilancia gubernamental y la propaganda controlan todos los aspectos de la vida de las personas?",
+			"answers": ["1984", "Rebelión en la granja", "Un mundo feliz", "Fahrenheit 451"],
+			"correctAnswer": "1984"
+		},
+		{
+			"question": "¿Quién pintó la famosa obra \"La noche estrellada\"?",
+			"answers": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Miguel Ángel"],
+			"correctAnswer": "Vincent van Gogh"
+		},
+		{
+			"question": "¿Qué escultor realizó la famosa escultura \"David\"?",
+			"answers": ["Miguel Ángel", "Donatello", "Leonardo da Vinci", "Rafael"],
+			"correctAnswer": "Miguel Ángel"
+		},
+		{
+			"question": "¿Cómo se llama la famosa estatua que representa a la diosa griega del amor y la belleza?",
+			"answers": ["Venus de Milo", "David", "El pensador", "Laocoonte y sus hijos"],
+			"correctAnswer": "Venus de Milo"
+		},
+		{
+			"question": "En música, ¿cuántas líneas tiene un pentagrama?",
+			"answers": ["Cinco", "Cuatro", "Seis", "Tres"],
+			"correctAnswer": "Cinco"
+		},
+		{
+			"question": "¿Qué famoso dramaturgo escribió la obra \"Hamlet\"?",
+			"answers": ["William Shakespeare", "Tennessee Williams", "Arthur Miller", "Samuel Beckett"],
+			"correctAnswer": "William Shakespeare"
+		},
+		{
+			"question": "¿Cuál es el álbum más vendido de la historia?",
+			"answers": ["Thriller", "Back in Black", "The Dark Side of the Moon", "Bat Out of Hell"],
+			"correctAnswer": "Thriller"
+		},
+		{
+			"question": "¿Qué banda es autora de la canción \"Believer\"?",
+			"answers": ["Imagine Dragons", "Coldplay", "Maroon 5", "Linkin Park"],
+			"correctAnswer": "Imagine Dragons"
+		},
+		{
+			"question": "¿Quién es el autor del famoso libro \"El principito\"?",
+			"answers": ["Antoine de Saint-Exupéry", "Jean-Jacques Rousseau", "Voltaire", "Victor Hugo"],
+			"correctAnswer": "Antoine de Saint-Exupéry"
+		},
+		{
+			"question": "¿Cómo se llama el famoso artista italiano que pintó el techo de la Capilla Sixtina?",
+			"answers": ["Miguel Ángel", "Leonardo da Vinci", "Rafael", "Sandro Botticelli"],
+			"correctAnswer": "Miguel Ángel"
+		}
+	],
+	"Geography": [
+		{
+			"question": "¿Cuál es el río más largo del mundo?",
+			"answers": ["Nilo", "Amazonas", "Yangtsé", "Misisipi"],
+			"correctAnswer": "Amazonas"
+		},
+		{
+			"question": "¿Cuál es la montaña más alta de América?",
+			"answers": ["Monte Denali", "Monte Logan", "Monte San Elías", "Pico de Orizaba"],
+			"correctAnswer": "Monte Denali"
+		},
+		{
+			"question": "¿Cuántos estados forman parte de Estados Unidos?",
+			"answers": ["50", "51", "48", "53"],
+			"correctAnswer": "50"
+		},
+		{
+			"question": "¿Cuál es la capital de Australia?",
+			"answers": ["Sídney", "Melbourne", "Canberra", "Brisbane"],
+			"correctAnswer": "Canberra"
+		},
+		{
+			"question": "¿Qué ciudad está ubicada tanto en Europa como en Asia?",
+			"answers": ["Estambul", "Moscú", "Kiev", "Nicosia"],
+			"correctAnswer": "Estambul"
+		},
+		{
+			"question": "¿Cuál es el país más pequeño del mundo?",
+			"answers": ["Ciudad del Vaticano", "Mónaco", "Nauru", "Tuvalu"],
+			"correctAnswer": "Ciudad del Vaticano"
+		},
+		{
+			"question": "¿Cómo se llama el idioma oficial en China?",
+			"answers": ["Mandarín", "Cantonés", "Hokkien", "Hakka"],
+			"correctAnswer": "Mandarín"
+		},
+		{
+			"question": "¿En qué continente está Arabia Saudita?",
+			"answers": ["Asia", "África", "Europa", "América del Sur"],
+			"correctAnswer": "Asia"
+		},
+		{
+			"question": "¿Cuál de estos países no está en Europa?",
+			"answers": ["Georgia", "Moldavia", "Armenia", "Azerbaiyán"],
+			"correctAnswer": "Armenia"
+		},
+		{
+			"question": "¿Cuál es el país más grande de África por superficie?",
+			"answers": ["Argelia", "Sudán", "Libia", "Congo"],
+			"correctAnswer": "Argelia"
+		},
+		{
+			"question": "¿Cuál es la moneda oficial de la India?",
+			"answers": ["Rupia", "Rublo", "Rial", "Real"],
+			"correctAnswer": "Rupia"
+		},
+		{
+			"question": "¿Cuál de estos países europeos está más al oeste?",
+			"answers": ["España", "Italia", "Grecia", "Alemania"],
+			"correctAnswer": "España"
+		},
+		{
+			"question": "¿Cómo se llama el sistema de arrecifes más grande del mundo, ubicado en Australia?",
+			"answers": ["Gran Barrera de Coral", "Arrecife de Barrera de Belice", "Arrecife Mesoamericano", "Arrecife de Andros"],
+			"correctAnswer": "Gran Barrera de Coral"
+		},
+		{
+			"question": "¿En qué país se encuentra el monte Everest?",
+			"answers": ["Nepal", "China", "India", "Pakistán"],
+			"correctAnswer": "Nepal"
+		},
+		{
+			"question": "¿Cuántas estrellas aparecen en la bandera de la República Popular China?",
+			"answers": ["4", "5", "6", "3"],
+			"correctAnswer": "5"
+		},
+		{
+			"question": "¿Cuál es la capital de Colombia?",
+			"answers": ["Bogotá", "Medellín", "Cali", "Barranquilla"],
+			"correctAnswer": "Bogotá"
+		},
+		{
+			"question": "¿Cuántos océanos hay en la Tierra?",
+			"answers": ["5", "6", "7", "8"],
+			"correctAnswer": "5"
+		},
+		{
+			"question": "¿Cuál es el país más grande por superficie?",
+			"answers": ["Rusia", "Canadá", "China", "Estados Unidos"],
+			"correctAnswer": "Rusia"
+		}
+	],
+	"Technology": [
+		{
+			"question": "¿Cómo se llama el primer virus informático?",
+			"answers": ["Creeper", "Elk Cloner", "Rabbit", "Stoned"],
+			"correctAnswer": "Creeper"
+		},
+		{
+			"question": "¿Cuál es el videojuego más vendido de la historia?",
+			"answers": ["Minecraft", "Tetris", "Wii Sports", "Grand Theft Auto V"],
+			"correctAnswer": "Minecraft"
+		},
+		{
+			"question": "¿Cómo se llama el sistema operativo de código abierto basado en el núcleo Linux?",
+			"answers": ["Ubuntu", "Windows", "macOS", "Android"],
+			"correctAnswer": "Ubuntu"
+		},
+		{
+			"question": "¿Cuántos megabytes tiene un gigabyte?",
+			"answers": ["1024", "1000", "100", "Depende del tamaño del archivo"],
+			"correctAnswer": "1024"
+		},
+		{
+			"question": "¿Cómo se llama el protagonista del videojuego \"The Legend of Zelda\"?",
+			"answers": ["Link", "Zelda", "Ganon", "Ganondorf"],
+			"correctAnswer": "Link"
+		},
+		{
+			"question": "¿Cómo se llama el navegador web desarrollado por Google?",
+			"answers": ["Chrome", "Firefox", "Safari", "Opera"],
+			"correctAnswer": "Chrome"
+		},
+		{
+			"question": "¿Cuántas leyes de la robótica (o leyes de Asimov) hay?",
+			"answers": ["3", "4", "2", "6"],
+			"correctAnswer": "3"
+		},
+		{
+			"question": "¿Cómo se llama la primera consola de videojuegos?",
+			"answers": ["Magnavox Odyssey", "Atari 2600", "Nintendo Entertainment System", "Sega Genesis"],
+			"correctAnswer": "Magnavox Odyssey"
+		},
+		{
+			"question": "¿De qué color son los cerdos en el videojuego \"Angry Birds\"?",
+			"answers": ["Verde", "Rojo", "Amarillo", "Azul"],
+			"correctAnswer": "Verde"
+		},
+		{
+			"question": "¿Qué empresa desarrolló el lenguaje de programación Java?",
+			"answers": ["Sun Microsystems", "Microsoft", "Apple", "IBM"],
+			"correctAnswer": "Sun Microsystems"
+		},
+		{
+			"question": "¿Cuál de estos no es un campeón en el videojuego \"League of Legends\"?",
+			"answers": ["Gang-il", "Ahri", "Teemo", "Ryze"],
+			"correctAnswer": "Gang-il"
+		},
+		{
+			"question": "¿El \".WAV\" es un formato de?",
+			"answers": ["Audio", "Video", "Imagen", "Documento"],
+			"correctAnswer": "Audio"
+		},
+		{
+			"question": "¿Cuántos bits tiene un byte?",
+			"answers": ["8", "4", "16", "32"],
+			"correctAnswer": "8"
+		},
+		{
+			"question": "¿Cómo se llama la primera computadora?",
+			"answers": ["ENIAC", "UNIVAC I", "Z1", "Colossus"],
+			"correctAnswer": "ENIAC"
+		},
+		{
+			"question": "¿Cuántos puntos dan las cerezas en el videojuego \"Pac-Man\"?",
+			"answers": ["1000", "700", "100", "400"],
+			"correctAnswer": "1000"
+		},
+		{
+			"question": "¿Cómo se llama el lenguaje de programación utilizado para crear páginas web?",
+			"answers": ["JavaScript", "CSS", "PhP", "Python"],
+			"correctAnswer": "JavaScript"
+		}
+	],
+	"History": [
+		{
+			"question": "¿Cómo se llama la diosa de la victoria en la mitología griega?",
+			"answers": ["Nike", "Puma", "Adidas", "Afrodita"],
+			"correctAnswer": "Nike"
+		},
+		{
+			"question": "¿Cuál de estas no es una de las Siete Maravillas del Mundo Antiguo?",
+			"answers": ["La Gran Biblioteca de Alejandría", "El Coloso de Rodas", "El Faro de Alejandría", "El Templo de Artemisa"],
+			"correctAnswer": "La Gran Biblioteca de Alejandría"
+		},
+		{
+			"question": "¿Qué país fue el primero en enviar un satélite al espacio?",
+			"answers": ["Rusia", "EE. UU.", "China", "Francia"],
+			"correctAnswer": "Rusia"
+		},
+		{
+			"question": "¿Cuántas óperas compuso Beethoven?",
+			"answers": ["1", "26", "165", "7"],
+			"correctAnswer": "1"
+		},
+		{
+			"question": "El primer emperador romano en convertirse al cristianismo fue:",
+			"answers": ["Constantino", "Augusto", "Julio César", "Nerón"],
+			"correctAnswer": "Constantino"
+		},
+		{
+			"question": "¿Por qué otro nombre se conoce al Imperio Romano de Oriente?",
+			"answers": ["El Imperio Bizantino", "El Imperio Otomano", "El Imperio Persa", "El Sacro Imperio Romano"],
+			"correctAnswer": "El Imperio Bizantino"
+		},
+		{
+			"question": "¿Cómo se llamaba el documento que estableció las Naciones Unidas?",
+			"answers": ["El Tratado de Versalles", "La Convención de Ginebra", "La Carta de las Naciones Unidas", "La Carta Magna"],
+			"correctAnswer": "La Carta de las Naciones Unidas"
+		},
+		{
+			"question": "¿Quién fue la primera mujer en ganar un Premio Nobel?",
+			"answers": ["Marie Curie", "Madre Teresa", "Margaret Thatcher", "Indira Gandhi"],
+			"correctAnswer": "Marie Curie"
+		},
+		{
+			"question": "¿En qué año cayó el Muro de Berlín?",
+			"answers": ["1989", "1991", "1987", "1993"],
+			"correctAnswer": "1989"
+		},
+		{
+			"question": "¿Cuál de estos países no formó parte de la Unión Soviética?",
+			"answers": ["Ucrania", "Georgia", "Polonia", "Bielorrusia"],
+			"correctAnswer": "Polonia"
+		},
+		{
+			"question": "¿Quién fue el primer explorador en circunnavegar el globo?",
+			"answers": ["Cristóbal Colón", "Vasco da Gama", "Magallanes", "Francis Drake"],
+			"correctAnswer": "Magallanes"
+		},
+		{
+			"question": "¿Qué civilización fue responsable de la construcción de Machu Picchu?",
+			"answers": ["Aztecas", "Mayas", "Incas", "Inuit"],
+			"correctAnswer": "Incas"
+		},
+		{
+			"question": "¿Qué filósofo dijo \"Pienso, luego existo\"?",
+			"answers": ["Descartes", "Platón", "Aristóteles", "Sócrates"],
+			"correctAnswer": "Descartes"
+		},
+		{
+			"question": "Según las leyendas antiguas, ¿quién fundó Roma?",
+			"answers": ["Rómulo y Remo", "Julio César", "Augusto", "Marco Aurelio"],
+			"correctAnswer": "Rómulo y Remo"
+		},
+		{
+			"question": "¿Cuál de estos no es un dios o diosa griega?",
+			"answers": ["Afrodita", "Hera", "Atenea", "Loki"],
+			"correctAnswer": "Loki"
+		}
+	],
+	"General culture": [
+		{
+			"question": "¿Cuántos corazones tiene un pulpo?",
+			"answers": ["3", "2", "1", "0"],
+			"correctAnswer": "3"
+		},
+		{
+			"question": "¿Qué río atraviesa Londres?",
+			"answers": ["Támesis", "Sena", "Danubio", "Nilo"],
+			"correctAnswer": "Támesis"
+		},
+		{
+			"question": "¿Qué es un falchion?",
+			"answers": ["Una espada", "Un escudo", "Un casco", "Una lanza"],
+			"correctAnswer": "Una espada"
+		},
+		{
+			"question": "¿De qué color es la \"G\" del logotipo de Google?",
+			"answers": ["Azul", "Rojo", "Amarillo", "Verde"],
+			"correctAnswer": "Azul"
+		},
+		{
+			"question": "¿Cuántos años tiene un lustro?",
+			"answers": ["5 años", "10 años", "15 años", "20 años"],
+			"correctAnswer": "5 años"
+		},
+		{
+			"question": "¿Qué quiere el Hombre de Hojalata en la novela \"El maravilloso Mago de Oz\"?",
+			"answers": ["Un corazón", "Un cerebro", "Valor", "Un hogar"],
+			"correctAnswer": "Un corazón"
+		},
+		{
+			"question": "¿Cuántos lados tiene un hexágono?",
+			"answers": ["6", "5", "7", "8"],
+			"correctAnswer": "6"
+		},
+		{
+			"question": "¿Quién se transforma en Hulk?",
+			"answers": ["Bruce Banner", "Tony Stark", "Peter Parker", "Steve Rogers"],
+			"correctAnswer": "Bruce Banner"
+		},
+		{
+			"question": "¿A qué parte del barco se refiere el término náutico \"estribor\"?",
+			"answers": ["Derecha", "Izquierda", "Frente", "Atrás"],
+			"correctAnswer": "Derecha"
+		},
+		{
+			"question": "¿Qué instrumento toca Sherlock Holmes?",
+			"answers": ["Violín", "Flauta", "Piano", "Guitarra"],
+			"correctAnswer": "Violín"
+		},
+		{
+			"question": "¿Cuántos jugadores tiene un equipo de fútbol en el campo?",
+			"answers": ["11", "10", "9", "12"],
+			"correctAnswer": "11"
+		},
+		{
+			"question": "¿Cómo se llama el libro sagrado del islam?",
+			"answers": ["Corán", "Biblia", "Torá", "Vedas"],
+			"correctAnswer": "Corán"
+		},
+		{
+			"question": "¿Qué sostiene la estatuilla del premio Óscar?",
+			"answers": ["Una espada", "Una antorcha", "Un libro", "Nada"],
+			"correctAnswer": "Una espada"
+		},
+		{
+			"question": "¿Cuál de estos es un instrumento de percusión?",
+			"answers": ["Tambor", "Violín", "Flauta", "Trompeta"],
+			"correctAnswer": "Tambor"
+		},
+		{
+			"question": "¿De qué color es el cabello del protagonista del anime \"Death Note\"?",
+			"answers": ["Negro", "Rubio", "Rojo", "Castaño"],
+			"correctAnswer": "Castaño"
+		}
+	],
+	"Entertainment": [
+		{
+			"question": "¿Cómo se llama el payaso de la película \"It\"?",
+			"answers": ["Pennywise", "Bozo", "Krusty", "Joker"],
+			"correctAnswer": "Pennywise"
+		},
+		{
+			"question": "¿En cuál de estas películas hay extraterrestres?",
+			"answers": ["La Gran Muralla", "Grandes héroes", "Dúplicity", "Braveheart"],
+			"correctAnswer": "La Gran Muralla"
+		},
+		{
+			"question": "¿Cómo se llama el shinigami de Misa Amane en el anime \"Death Note\"?",
+			"answers": ["Rem", "Ryuk", "Sidoh", "Gelus"],
+			"correctAnswer": "Rem"
+		},
+		{
+			"question": "¿Cuántas bolas de dragón hay en el anime \"Dragon Ball\"?",
+			"answers": ["7", "8", "6", "12"],
+			"correctAnswer": "7"
+		},
+		{
+			"question": "¿Quién interpretó a Batman en la película de 2008 \"El Caballero Oscuro\"?",
+			"answers": ["Christian Bale", "Ben Affleck", "George Clooney", "Val Kilmer"],
+			"correctAnswer": "Christian Bale"
+		},
+		{
+			"question": "¿Cómo se llama el hada en la película de Disney \"Peter Pan\"?",
+			"answers": ["Campanilla", "Wendy", "Vidia", "Navi"],
+			"correctAnswer": "Campanilla"
+		},
+		{
+			"question": "¿Quién es el dueño de Garfield en la tira cómica \"Garfield\"?",
+			"answers": ["Jon Arbuckle", "Odie", "Nermal", "Liz Wilson"],
+			"correctAnswer": "Jon Arbuckle"
+		},
+		{
+			"question": "¿Dónde está el punto débil de los titanes en el anime \"Ataque a los Titanes\"?",
+			"answers": ["Nuca", "Cabeza", "Corazón", "Espalda"],
+			"correctAnswer": "Nuca"
+		},
+		{
+			"question": "¿Cómo se llama el continente ficticio donde transcurren los eventos de la serie \"Juego de Tronos\"?",
+			"answers": ["Poniente", "Essos", "Sothoryos", "Ulthos"],
+			"correctAnswer": "Poniente"
+		},
+		{
+			"question": "¿Cuál de estas no es una raza o especie en el videojuego \"World of Warcraft\"?",
+			"answers": ["Kokiri", "No-muerto", "Huargen", "Trol"],
+			"correctAnswer": "Kokiri"
+		},
+		{
+			"question": "¿Cuántos cachorros pare Perdita en la película de Disney \"101 Dálmatas\"?",
+			"answers": ["15", "101", "99", "8"],
+			"correctAnswer": "15"
+		},
+		{
+			"question": "¿Cómo se llama el tigre que aparece en la película \"La vida de Pi\"?",
+			"answers": ["Richard Parker", "Tony", "Shere Khan", "Pi Patel"],
+			"correctAnswer": "Richard Parker"
+		},
+		{
+			"question": "¿Cómo se encoge Alicia por primera vez en la película de Disney \"Alicia en el País de las Maravillas\"?",
+			"answers": ["Bebe una poción", "Come un pastel", "Cae por un agujero", "Atraviesa un espejo"],
+			"correctAnswer": "Bebe una poción"
+		},
+		{
+			"question": "¿Quién escribió la novela \"Cien años de soledad\"?",
+			"answers": ["Gabriel García Márquez", "Jorge Luis Borges", "Isabel Allende", "Octavio Paz"],
+			"correctAnswer": "Gabriel García Márquez"
+		},
+		{
+			"question": "¿En cuál de estos animes el protagonista lleva a su hermana en una caja?",
+			"answers": ["Kimetsu no Yaiba", "Elfen Lied", "Code Geass", "Made in Abyss"],
+			"correctAnswer": "Kimetsu no Yaiba"
+		}
+	]
+}
