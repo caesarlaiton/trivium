@@ -39,7 +39,7 @@ export default async function getQuestions (topics, qNumber) {
 	}
 
 	// En entorno de desarrollo, simulamos un pequeño retraso de carga
-	if (process.env.NODE_ENV === 'development') {
+	/*if (process.env.NODE_ENV === 'development') {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
 				// const error = new Error('Custom error')
@@ -49,7 +49,7 @@ export default async function getQuestions (topics, qNumber) {
 				resolve(randomArray(getOfflineQuestions()))
 			}, 1 * 1000)
 		})
-	}
+	}*/
 
 	const iaQuestions = fetch('/api/questions', {
 		method: 'POST',
