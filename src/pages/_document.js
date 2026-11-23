@@ -5,7 +5,7 @@ export default function Document () {
 		<Html lang="es">
 			<Head>
 				<meta charSet="UTF-8" />
-				<link rel="icon" href="/favicon.svg" />
+				<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
 				{/* Meta */}
 				<meta name="author" content="Trivium Team" />
