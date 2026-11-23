@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import JsxForm from './JsxForm'
 import { IoCloseSharp } from 'react-icons/io5'
 import playSound from '@/helpers/playSound'
-import queryValidator from '@/helpers/gameConfig'
+import queryValidator, { defaultQuery } from '@/helpers/gameConfig'
 import categoriesJSON from '@/assets/categories.json'
 import { useBoundStore } from '@/store/useBoundStore'
 
@@ -18,6 +18,20 @@ export default function NewGameForm () {
 	useEffect(() => setNowQueries(queries), [queries])
 
 	useEffect(() => {
+		const handleOpenWithQueries = (e) => {
+			const nextQueries = e.detail ? { ...defaultQuery, ...e.detail } : defaultQuery
+			setQueries(nextQueries)
+			setNowQueries(nextQueries)
+			playSound('pop')
+			if (dialog.current && !dialog.current.open) {
+				dialog.current.showModal()
+			}
+		}
+		window.addEventListener('openNewGameModal', handleOpenWithQueries)
+		return () => window.removeEventListener('openNewGameModal', handleOpenWithQueries)
+	}, [setQueries])
+
+	useEffect(() => {
 		if (router.isReady && router.pathname === '/play') {
 			setQueries(queryValidator(router.query))
 		}
@@ -26,7 +40,7 @@ export default function NewGameForm () {
 	function handleInputs (e) {
 		if (e.target.name === 'infinitymode' || e.target.name === 'timemode') {
 			e.target.checked ? playSound('pop-up-on') : playSound('pop-up-off')
-			return setNowQueries({ ...nowQueries, [e.target.name]: e.target.name === 'infinitymode' ? !e.target.checked : e.target.checked })
+			return setNowQueries({ ...nowQueries, [e.target.name]: e.target.checked })
 		}
 
 		if (e.target.name === 'categories') {
@@ -66,6 +80,7 @@ export default function NewGameForm () {
 		function handleAnimationEnd () {
 			dialog.current.classList.remove('hide')
 			dialog.current.close()
+			setNowQueries(queries)
 			dialog.current.removeEventListener('animationend', handleAnimationEnd)
 		}
 		dialog.current.addEventListener('animationend', handleAnimationEnd)
@@ -73,10 +88,13 @@ export default function NewGameForm () {
 
 	return (
 		<>
-			
 			<dialog
 				ref={dialog}
 				onClick={(e) => clickOutsideDialog(e)}
+				onCancel={(e) => {
+					e.preventDefault()
+					closeDialog()
+				}}
 				id='newGameDialog'
 				className='fixed left-1/2 top-1/2 m-0 max-h-[90dvh] w-[94vw] max-w-[850px] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-2xl border border-slate-200 bg-white px-5 py-7 text-slate-900 shadow-2xl sm:px-7 md:px-9'>
 				<button
@@ -98,7 +116,6 @@ export default function NewGameForm () {
 					</button>
 				</form>
 			</dialog>
-
 
 			<style jsx global>{`
 				.new-game-dialog {

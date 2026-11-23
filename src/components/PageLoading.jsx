@@ -15,7 +15,7 @@ export default function PageLoading () {
 
                 {/* Nombre */}
                 <h1 className='mt-8 text-4xl font-extrabold tracking-tight'>
-                    Triveum<span className='text-blue-400'>.</span>
+                    Trivium<span className='text-blue-400'>.</span>
                 </h1>
 
                 {/* Mensaje */}

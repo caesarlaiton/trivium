@@ -1,4 +1,3 @@
-
 import Head from 'next/head'
 import MainHome from '@/components/Home/MainHome'
 import GameModes from '@/components/Home/GameModes'
@@ -13,25 +12,25 @@ export default function Main () {
 	return (
 		<>
 			<Head>
-				<title>Triveum | Trivia y conocimiento</title>
+				<title>Trivium | Trivia y conocimiento</title>
 				<meta
 					name='description'
-					content='Pon a prueba tus conocimientos con Triveum.'
+					content='Pon a prueba tus conocimientos con Trivium.'
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 			</Head>
 
-			<main className='triveum-home'>
-				<aside className='triveum-home__hero'>
+			<main className='trivium-home'>
+				<aside className='trivium-home__hero'>
 					<MainHome />
 				</aside>
 
-				<section className='triveum-home__content'>
-					<div className='triveum-home__modes'>
+				<section className='trivium-home__content'>
+					<div className='trivium-home__modes'>
 						<GameModes />
 					</div>
 
-					<div className='triveum-home__categories'>
+					<div className='trivium-home__categories'>
 						<Categories />
 					</div>
 				</section>
@@ -50,7 +49,7 @@ export default function Main () {
 					min-height: 100%;
 				}
 
-				.triveum-home {
+				.trivium-home {
 					display: grid;
 					grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.15fr);
 					width: 100%;
@@ -58,7 +57,7 @@ export default function Main () {
 					background: #f1f5f9;
 				}
 
-				.triveum-home__hero {
+				.trivium-home__hero {
 					position: relative;
 					display: flex;
 					min-width: 0;
@@ -67,7 +66,7 @@ export default function Main () {
 					overflow: hidden;
 				}
 
-				.triveum-home__content {
+				.trivium-home__content {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
@@ -76,15 +75,15 @@ export default function Main () {
 					padding: 28px clamp(20px, 3vw, 48px);
 				}
 
-				.triveum-home__modes,
-				.triveum-home__categories {
+				.trivium-home__modes,
+				.trivium-home__categories {
 					width: 100%;
 					min-width: 0;
 				}
 
 				/* Portátiles y pantallas de poca altura */
 				@media (min-width: 1024px) and (max-height: 800px) {
-					.triveum-home__content {
+					.trivium-home__content {
 						gap: 18px;
 						padding-top: 18px;
 						padding-bottom: 18px;
@@ -93,15 +92,15 @@ export default function Main () {
 
 				/* Tablet */
 				@media (max-width: 1023px) {
-					.triveum-home {
+					.trivium-home {
 						grid-template-columns: 1fr;
 					}
 
-					.triveum-home__hero {
+					.trivium-home__hero {
 						min-height: 390px;
 					}
 
-					.triveum-home__content {
+					.trivium-home__content {
 						gap: 30px;
 						padding: 35px clamp(22px, 5vw, 55px);
 					}
@@ -109,11 +108,11 @@ export default function Main () {
 
 				/* Móviles */
 				@media (max-width: 600px) {
-					.triveum-home__hero {
+					.trivium-home__hero {
 						min-height: 350px;
 					}
 
-					.triveum-home__content {
+					.trivium-home__content {
 						gap: 28px;
 						padding: 28px 18px;
 					}

@@ -1,8 +1,14 @@
-
 import categories from '@/assets/categories.json'
 import Image from 'next/image'
+import { openNewGameModal } from '@/helpers/openDialog'
 
 export default function Categories () {
+	function handleSelectCategory (categoryId) {
+		openNewGameModal({
+			categories: [categoryId]
+		})
+	}
+
 	return (
 		<section className='w-full'>
 			<div className='mb-4'>
@@ -21,8 +27,17 @@ export default function Categories () {
 				{categories.map(category => (
 					<li
 						key={category.id}
-						title={category.name}
-						className='group flex min-h-[100px] flex-col items-center justify-center gap-2 rounded-xl border border-white/60 p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:min-h-[115px] sm:p-4'
+						onClick={() => handleSelectCategory(category.id)}
+						role='button'
+						tabIndex={0}
+						onKeyDown={(e) => {
+							if (e.key === 'Enter' || e.key === ' ') {
+								e.preventDefault()
+								handleSelectCategory(category.id)
+							}
+						}}
+						title={`Jugar con ${category.label}`}
+						className='group flex min-h-[100px] min-w-0 cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-white/60 p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-95 sm:min-h-[115px] sm:p-4'
 						style={{
 							backgroundColor: category.color
 						}}

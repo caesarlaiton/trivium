@@ -35,7 +35,7 @@ export default function Play () {
     return (
         <>
             <Head>
-                <title>Triveum | Partida</title>
+                <title>Trivium | Partida</title>
                 <meta name='theme-color' content='#071a3d' />
             </Head>
 
@@ -77,13 +77,13 @@ export default function Play () {
                             rgba(7, 26, 61, 0.15),
                             rgba(7, 26, 61, 0.15)
                         ),
-                        url('/images/triveum-background.jpg');
+                        url('/images/trivium-background.jpg');
 
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
 
-                    animation: triveumBackgroundMove 18s ease-in-out infinite alternate;
+                    animation: triviumBackgroundMove 18s ease-in-out infinite alternate;
                     will-change: transform;
                 }
 
@@ -94,7 +94,7 @@ export default function Play () {
                     background: transparent !important;
                 }
 
-                @keyframes triveumBackgroundMove {
+                @keyframes triviumBackgroundMove {
                     0% {
                         transform: scale(1.05) translate3d(-1.5%, 0, 0);
                     }

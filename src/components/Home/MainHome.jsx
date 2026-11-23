@@ -1,7 +1,8 @@
 
 import categories from '@/assets/categories.json'
 import PageFooter from '../PageFooter'
-import playSound from '@/helpers/playSound'
+import { openNewGameModal } from '@/helpers/openDialog'
+import { defaultQuery } from '@/helpers/gameConfig'
 
 export default function MainHome () {
 	function handleTitleHover (e) {
@@ -13,8 +14,7 @@ export default function MainHome () {
 	const handleTitleLeave = (e) => (e.target.style.color = 'white')
 
 	function handlePlay () {
-		playSound('pop')
-		document.getElementById('newGameDialog')?.showModal()
+		openNewGameModal(defaultQuery)
 	}
 
 	return (
@@ -26,10 +26,10 @@ export default function MainHome () {
 
 			<div className='relative z-10 flex items-center gap-3'>
 				<div className='flex h-9 w-9 items-center justify-center rounded-xl bg-blue-500 shadow-lg shadow-blue-950/30'>
-					<span className='text-lg font-black text-white'>Q</span>
+					<span className='text-lg font-black text-white'>T</span>
 				</div>
 				<span className='text-xs font-bold tracking-[0.25em] text-blue-100 uppercase'>
-					Triveum
+					Trivium
 				</span>
 			</div>
 
@@ -45,7 +45,7 @@ export default function MainHome () {
 					className='mb-4 text-6xl font-black leading-none tracking-[-0.07em] sm:text-7xl lg:text-7xl xl:text-8xl'
 					translate='no'
 				>
-					{'Triveum'.split('').map((letter, index) => (
+					{'Trivium'.split('').map((letter, index) => (
 						<span
 							key={index}
 							id={letter + index + 10}
@@ -83,7 +83,7 @@ export default function MainHome () {
 
 				<div className='mt-7 flex items-center gap-3 text-xs text-slate-400'>
 					<div className='flex -space-x-2'>
-						<span className='flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#172554] bg-blue-500 text-xs font-bold text-white'>Q</span>
+						<span className='flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#172554] bg-blue-500 text-xs font-bold text-white'>T</span>
 						<span className='flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#172554] bg-slate-500 text-xs font-bold text-white'>?</span>
 						<span className='flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#172554] bg-indigo-500 text-xs font-bold text-white'>!</span>
 					</div>

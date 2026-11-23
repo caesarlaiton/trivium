@@ -6,11 +6,8 @@ import { IoMdInfinite } from 'react-icons/io'
 import { FaHeart } from 'react-icons/fa'
 import fiftyImg from '@/assets/fifty.svg'
 import categoriesJSON from '@/assets/categories.json'
-import { useBoundStore } from '@/store/useBoundStore'
 
 export default function JsxForm ({ handleInputs, nowQueries }) {
-	const { queries } = useBoundStore(state => state)
-
 	const WILCARDS = [
 		{ name: 'Saltar pregunta', icon: <BsSkipEndFill className='text-2xl text-white' />, amount: 1 },
 		{ name: 'Eliminar dos respuestas incorrectas', icon: <Image src={fiftyImg.src} alt='cincuenta cincuenta' width={25} height={25} />, amount: 1 },
@@ -46,7 +43,7 @@ export default function JsxForm ({ handleInputs, nowQueries }) {
 
 					<div className='mb-4 flex items-center justify-between gap-3'>
 						<label htmlFor='cbx' className='text-xs font-medium text-slate-600 sm:text-sm'>Modo infinito</label>
-						<input id='cbx' onClick={handleInputs} defaultChecked={!nowQueries.infinitymode} type='checkbox' name='infinitymode' className='h-5 w-5 cursor-pointer accent-blue-600' />
+						<input id='cbx' onChange={handleInputs} checked={nowQueries.infinitymode} type='checkbox' name='infinitymode' className='h-5 w-5 cursor-pointer accent-blue-600' />
 					</div>
 
 					<div className='flex items-center gap-4'>
@@ -55,7 +52,7 @@ export default function JsxForm ({ handleInputs, nowQueries }) {
 							name='questions'
 							min={defaultQuestions.minQuestions}
 							max={defaultQuestions.maxQuestions}
-							defaultValue={nowQueries.questions}
+							value={nowQueries.questions}
 							onChange={handleInputs}
 							className={`min-w-0 flex-1 cursor-pointer ${nowQueries.infinitymode ? 'grayscale cursor-not-allowed' : ''}`}
 							disabled={nowQueries.infinitymode}
@@ -72,13 +69,13 @@ export default function JsxForm ({ handleInputs, nowQueries }) {
 
 					<div className='mb-4 flex items-center justify-between gap-3'>
 						<label htmlFor='cbx2' className='text-xs font-medium text-slate-600 sm:text-sm'>Activar límite de tiempo</label>
-						<input id='cbx2' onClick={handleInputs} defaultChecked={nowQueries.timemode} type='checkbox' name='timemode' className='h-5 w-5 cursor-pointer accent-blue-600' />
+						<input id='cbx2' onChange={handleInputs} checked={nowQueries.timemode} type='checkbox' name='timemode' className='h-5 w-5 cursor-pointer accent-blue-600' />
 					</div>
 
 					<div className='grid grid-cols-4 gap-2'>
 						{[10, 20, 30, 60].map(time => (
 							<label key={time} className='min-w-0 cursor-pointer'>
-								<input className='peer sr-only' type='radio' name='time' id={`${time}s`} value={time} defaultChecked={time === Number(nowQueries.time)} onChange={handleInputs} disabled={!nowQueries.timemode} />
+								<input className='peer sr-only' type='radio' name='time' id={`${time}s`} value={time} checked={time === Number(nowQueries.time)} onChange={handleInputs} disabled={!nowQueries.timemode} />
 								<span className={`block rounded-lg border border-slate-200 py-2 text-center text-xs font-bold transition-all sm:text-sm peer-checked:border-blue-600 peer-checked:bg-blue-600 peer-checked:text-white ${!nowQueries.timemode ? 'cursor-not-allowed opacity-40' : 'bg-slate-100 text-slate-700 hover:border-blue-300 active:scale-95'}`}>
 									{time}s
 								</span>

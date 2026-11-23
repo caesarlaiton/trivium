@@ -1,27 +1,43 @@
-
 import { ImInfinite } from 'react-icons/im'
 import { BiTimeFive } from 'react-icons/bi'
 import { TbDeviceGamepad2 } from 'react-icons/tb'
+import { openNewGameModal } from '@/helpers/openDialog'
 
 const gameModes = [
 	{
 		icon: <TbDeviceGamepad2 className='text-2xl sm:text-3xl' />,
 		title: 'Clásico',
-		description: '¡Completa las preguntas sin fallar para ganar! Tienes comodines que te pueden ayudar'
+		description: '¡Completa las preguntas sin fallar para ganar! Tienes comodines que te pueden ayudar',
+		config: {
+			infinitymode: false,
+			timemode: false
+		}
 	},
 	{
 		icon: <BiTimeFive className='text-2xl sm:text-3xl' />,
 		title: 'Tiempo',
-		description: '¡Completa las preguntas dentro del límite de tiempo para ganar! Puedes usar comodines'
+		description: '¡Completa las preguntas dentro del límite de tiempo para ganar! Puedes usar comodines',
+		config: {
+			infinitymode: false,
+			timemode: true
+		}
 	},
 	{
 		icon: <ImInfinite className='text-2xl sm:text-3xl' />,
 		title: 'Infinito',
-		description: '¡Rompe tu récord completando tantas preguntas como puedas! Puedes usar comodines'
+		description: '¡Rompe tu récord completando tantas preguntas como puedas! Puedes usar comodines',
+		config: {
+			infinitymode: true,
+			timemode: false
+		}
 	}
 ]
 
 export default function GameModes () {
+	function handleSelectMode (config) {
+		openNewGameModal(config)
+	}
+
 	return (
 		<section className='w-full'>
 			<div className='mb-4'>
@@ -41,7 +57,16 @@ export default function GameModes () {
 					{gameModes.map((mode, index) => (
 						<li
 							key={index + mode.title}
-							className='group flex min-w-0 flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-900/10 sm:p-4 lg:p-3 xl:p-4'
+							onClick={() => handleSelectMode(mode.config)}
+							role='button'
+							tabIndex={0}
+							onKeyDown={(e) => {
+								if (e.key === 'Enter' || e.key === ' ') {
+									e.preventDefault()
+									handleSelectMode(mode.config)
+								}
+							}}
+							className='group flex min-w-0 cursor-pointer flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-900/10 active:scale-[0.98] sm:p-4 lg:p-3 xl:p-4'
 						>
 							<div className='mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white sm:h-11 sm:w-11'>
 								{mode.icon}
