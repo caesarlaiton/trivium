@@ -1,72 +1,100 @@
-import offlineQuestions from '@/assets/questions.json'
-const cohere = require('cohere-ai')
-cohere.init(process.env.COHERE_API_KEY)
+export default async function handler (req, res) {
+	if (req.method !== 'POST') {
+		return res.status(405).json({ message: 'Solo se permiten peticiones POST', statusCode: 405 })
+	}
+	if (!req.body.topics || !Array.isArray(req.body.topics)) {
+		return res.status(400).json({ message: 'Se requieren los temas (topics)', statusCode: 400 })
+	}
 
-function defaultPromt () {
-	const topics = Object.keys(offlineQuestions)
-	const random3Topics = topics.sort(() => Math.random() - Math.random()).slice(0, 3)
-	const randomQuestions = random3Topics.map(topic => {
-		const randomQuestion = {
-			...offlineQuestions[topic][Math.floor(Math.random() * offlineQuestions[topic].length)],
-			topic
+	const apiKey = process.env.COHERE_API_KEY
+	if (!apiKey) {
+		return res.status(500).json({ message: 'COHERE_API_KEY no está configurada', statusCode: 500 })
+	}
+
+	// Control de timeout cancelable a 30 segundos
+	const controller = new AbortController()
+	const timeout = setTimeout(() => controller.abort(), 30000)
+
+	try {
+		const topicsList = req.body.topics.join(', ')
+
+		const response = await fetch('https://api.cohere.com/v2/chat', {
+			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${apiKey}`,
+				'Content-Type': 'application/json'
+			},
+			signal: controller.signal,
+			body: JSON.stringify({
+				model: 'command-r7b-12-2024',
+				response_format: { type: 'json_object' },
+				max_tokens: 500,
+				messages: [
+					{
+						role: 'system',
+						content:
+							'Eres un generador de preguntas de trivia para un juego. Genera un objeto JSON con una propiedad "questions", que contenga un arreglo de 3 preguntas de trivia en español sobre los temas solicitados. Cada objeto de pregunta debe tener exactamente los campos: "question" (string), "topic" (string), "answers" (arreglo de 4 strings: 1 respuesta correcta y 3 distractores incorrectos), y "correctAnswer" (string idéntico a la opción correcta contenida en answers).'
+					},
+					{
+						role: 'user',
+						content: `Genera 3 preguntas de trivia en español para los temas: ${topicsList}.`
+					}
+				]
+			})
+		})
+
+		clearTimeout(timeout)
+
+		if (!response.ok) {
+			const errorData = await response.json().catch(() => ({}))
+			throw new Error(errorData.message || `Error de API Cohere: ${response.status}`)
 		}
-		return randomQuestion
-	})
 
-	const text = randomQuestions.reduce((acc, question, index) => {
-		const questionText = `question: ${question.question}\ntopic: ${question.topic}\n${question.answers.map(answer => `-${answer}`).join('\n')}\ncorrect: ${question.correctAnswer}\n\n`
-		if (index === randomQuestions.length - 1) return acc + questionText.slice(0, -1)
-		return acc + questionText
-	}, '')
+		const data = await response.json()
+		const contentText = data.message?.content?.[0]?.text
+		if (!contentText) {
+			throw new Error('Respuesta vacía de Cohere')
+		}
 
-	return 'Generate 3 questions, ' + random3Topics.map(topic => `1 about ${topic}`).join(', ') + '. Each question has 4 answers (1 correct and 3 incorrect).\n---\n' + text + '---\n'
-}
+		const parsed = JSON.parse(contentText)
+		const rawQuestions = Array.isArray(parsed) ? parsed : (parsed.questions || Object.values(parsed)[0] || [])
 
-export default function handler (req, res) {
-	if (req.method !== 'POST') return res.status(405).json({ message: 'Only POST requests allowed', statusCode: 405 })
-	if (!req.body.topics) return res.status(400).json({ message: 'Topics are required', statusCode: 400 })
+		if (!Array.isArray(rawQuestions) || rawQuestions.length === 0) {
+			throw new Error('Formato de preguntas inválido devuelto por Cohere')
+		}
 
-	const promt = defaultPromt() + defaultPromt() + 'Generate 3 questions, ' + req.body.topics.map(topic => `1 about ${topic}`).join(', ') + '. Each question has 4 answers (1 correct and 3 incorrect).\n---'
+		// Estructura exacta esperada por el Frontend
+		const formattedQuestions = rawQuestions.slice(0, 3).map((q, idx) => {
+			const rawAnswers = Array.isArray(q.answers) ? q.answers.map(a => String(a).trim()) : []
+			const correctAnswer = typeof q.correctAnswer === 'string' ? q.correctAnswer.trim() : String(rawAnswers[0] || '')
 
-	setTimeout(() => {
-		res.status(500).json({ message: 'Request timed out', statusCode: 500 })
-	}, 10 * 1000)
-
-	cohere.generate({
-		model: 'command',
-		prompt: promt,
-		max_tokens: 450,
-		temperature: 0.8,
-		k: 0,
-		stop_sequences: ['---'],
-		return_likelihoods: 'NONE'
-	})
-		.then(response => {
-			if (response.statusCode >= 400) {
-				return res.status(500).json({
-					message: response.body.message || 'Something went wrong',
-					statusCode: response.statusCode || 500
-				})
+			// Aseguramos que la respuesta correcta esté estrictamente dentro de answers
+			const answers = [...rawAnswers]
+			if (!answers.includes(correctAnswer)) {
+				if (answers.length < 4) answers.push(correctAnswer)
+				else answers[0] = correctAnswer
 			}
-			res.status(200).json(response.body.generations[0].text.split('\n\n').map(question => {
-				if (question.startsWith('\n')) question = question.slice(1)
-				if (question.endsWith('\n')) question = question.slice(0, -1)
-				const questionArray = question.split('\n')
-				const questionObject = {
-					question: questionArray[0].split('question: ')[1]?.trim(),
-					topic: questionArray[1].split('topic: ')[1]?.trim(),
-					answers: questionArray.slice(2, 6).map(answer => answer.split('-')[1]?.trim()),
-					correctAnswer: questionArray[6].split('correct: ')[1]?.trim(),
-					userAnswer: undefined,
-					ia: true
-				}
-				return questionObject
-			}))
+
+			// Barajamos las opciones para que la correcta no quede siempre en la primera posición
+			answers.sort(() => Math.random() - 0.5)
+
+			return {
+				question: typeof q.question === 'string' ? q.question.trim() : 'Pregunta sin título',
+				topic: typeof q.topic === 'string' ? q.topic.trim() : (req.body.topics[idx] || 'General'),
+				answers,
+				correctAnswer,
+				userAnswer: undefined,
+				ia: true
+			}
 		})
-		.catch(err => {
-			console.log(err)
-			const message = err.body.message || 'Something went wrong'
-			const statusCode = err.statusCode || 500
-			return res.status(500).json({ message, statusCode })
+
+		return res.status(200).json(formattedQuestions)
+	} catch (err) {
+		clearTimeout(timeout)
+		console.error('Error en /api/questions:', err.message)
+		return res.status(500).json({
+			message: err.message || 'Error al generar preguntas con IA',
+			statusCode: 500
 		})
+	}
 }
